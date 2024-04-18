@@ -6,11 +6,13 @@ public class GameManager : MonoBehaviour
 {
     public float thoiGianGioiHan = 30f;
     public bool ketThucGame = false;
+    public bool winGame = false;
     private static GameManager instance;
     public GameObject gameOverObject;
     public GameObject timeGameObject;
+    public GameObject winGameObject;
 
-    private float thoiGianHoiKhiQuaCheckPoint = 31f;
+    private float thoiGianHoiKhiQuaCheckPoint = 90f;
 
     public static GameManager Instance
     {
@@ -42,6 +44,11 @@ public class GameManager : MonoBehaviour
                 KetThucGame();
             }
         }
+        if(winGame)
+        {
+            timeGameObject.SetActive(false);
+            winGameObject.SetActive(true);
+        }
     }
     public void KetThucGame()
     {
@@ -52,6 +59,13 @@ public class GameManager : MonoBehaviour
         if(!ketThucGame)
         {
             thoiGianGioiHan = thoiGianHoiKhiQuaCheckPoint;
+        }
+    }
+    public void QuaWinPoint()
+    {
+        if(!ketThucGame)
+        {
+            winGame = true;
         }
     }
 }

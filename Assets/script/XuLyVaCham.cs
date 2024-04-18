@@ -9,6 +9,9 @@ public class XuLyVaCham : MonoBehaviour
         if(other.gameObject.tag=="CheckPoint")
         {
             GameManager.Instance.QuaCheckPoint();
+        }if(other.gameObject.tag==("WinPoint"))
+        {
+            GameManager.Instance.QuaWinPoint();
         }
     }
 }

@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\script\Menu.cs" />
+    <Compile Include="Assets\Minimap.cs" />
     <Compile Include="Assets\script\GameManager.cs" />
     <Compile Include="Assets\script\XuLyVaCham.cs" />
     <Compile Include="Assets\script\GameUI.cs" />
